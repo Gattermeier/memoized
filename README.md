@@ -22,10 +22,7 @@ var fibonacci = function(n) {
   }
 }
 
-var fib = memoize.performance(function(n) {
-  return fibonacci(n);
-}, 10);
-
+var fib = memoize.performance(fibonacci, 10);
 fib(20);
 
 ```
