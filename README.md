@@ -1,20 +1,22 @@
 # Memoize
+[![npm version](https://badge.fury.io/js/memoized.svg)](https://badge.fury.io/js/memoized)    
+
 A small library to memoize functions for Node.js and web browser.   
 It supports limiting cache size and governing cache by the performance or frequency of function calls.  
 
 ## Usage
 
 ```javascript
-var memoized = memoize.frequency(func,limit);
+const memoized = memoize.frequency(func,limit);
 
 ```
 
 ## Example
 
 ```javascript
-var memoize = require('./memoize.js');  
+const memoize = require('./memoize.js');  
 
-var fibonacci = function(n) {
+const fibonacci = (n) => {
   if (n === 0 || n === 1) {
     return n;
   } else {
@@ -22,7 +24,7 @@ var fibonacci = function(n) {
   }
 }
 
-var fib = memoize.performance(fibonacci, 10);
+const fib = memoize.performance(fibonacci, 10);
 fib(20);
 
 ```
